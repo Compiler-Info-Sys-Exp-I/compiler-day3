@@ -25,10 +25,6 @@ let main filename =
   assemble name oc l;
   close_out oc
 
-let test () =
-  let s1 = "while i < 10 do i := i + 1;" in
-  print_stack_code (Lexing.from_string s1)
-
 let () =
   if (Array.length Sys.argv) > 1 then
     let filename = Sys.argv.(1) in
